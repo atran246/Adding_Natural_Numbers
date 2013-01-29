@@ -6,3 +6,7 @@
 ; A N (Natural Number) is one of:
 ; - 0
 ; - (add1 N)
+
+; N -> Number
+; Compute (+ n pi) without using +
+(define (add-to-pi n) pi)
