@@ -9,4 +9,6 @@
 
 ; N -> Number
 ; Compute (+ n pi) without using +
+(check-expect (add-to-pi 3) (+ 3 pi))
+(check-expect (add-to-pi 30) (+ 30 pi))
 (define (add-to-pi n) pi)
