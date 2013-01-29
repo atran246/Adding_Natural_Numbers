@@ -9,9 +9,9 @@
 
 ; N -> Number
 ; Compute (+ n pi) without using +
-(check-expect (add-to-pi 3) (+ 3 pi))
-(check-expect (add-to-pi 30) (+ 30 pi))
+(check-within (add-to-pi 3) (+ 3 pi) 0.1)
+(check-within (add-to-pi 30) (+ 30 pi) 0.1)
 (define (add-to-pi n) 
  (cond
-  [(zero? n) ...]
-  [(positive? n) (... (add-to-pi (sub1 n) s) ... )]))
+  [(zero? n) pi]
+  [(positive? n) (add1 (add-to-pi (sub1 n)))])) 
