@@ -9,3 +9,9 @@
 
 ; N -> Number
 ; compute (+ n x) without using +
+(check-expect (sum 2340 1) 2341)
+(check-expect (sum 346 -6) 340)
+(define (sum n x ) 
+  (cond
+    [(zero? n) ...]
+    [(positive? n) ... (sum (sub1 n)) ...]))
