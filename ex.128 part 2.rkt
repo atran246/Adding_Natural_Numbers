@@ -13,5 +13,5 @@
 (check-expect (sum 346 -6) 340)
 (define (sum n x ) 
   (cond
-    [(zero? n) ...]
-    [(positive? n) ... (sum (sub1 n)) ...]))
+    [(zero? n) x]
+    [(positive? n) (add1 (sum (sub1 n) x))]))
